@@ -32,7 +32,7 @@ gulp.task('sass', function() {
 
 gulp.task('devServer', function () {
   connect.server({
-    root: [__dirname+'/html'],
+    root: [__dirname],
     port: 8000,
     livereload: true
   });
