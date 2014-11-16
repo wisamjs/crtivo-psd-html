@@ -12,8 +12,9 @@ var gulp = require('gulp'),
   minifyHTML = require('gulp-minify-html'),
   imagemin = require('gulp-imagemin'),
   pngcrush = require('imagemin-pngcrush'),
+  shell = require('gulp-shell'),
 
-	//variables to reference all javascript files
+	//variables to reference all files
 	jsFiles = ['scripts/*.js'],
 	scssFiles = ['styles/main.scss'],
   cssFiles = ['styles/main.css','styles/normalize.css'];
@@ -60,6 +61,10 @@ gulp.task('watch', function() {
   gulp.watch(jsFiles, ['lint']);
 });
 
+gulp.task('browser', shell.task([
+  'open "http://localhost:8000"'
+  ]));
+
 gulp.task('minify-css', function() {
   gulp.src(cssFiles)
     .pipe(minifyCSS({keepBreaks:true}))
@@ -85,5 +90,5 @@ gulp.task('minify-img', function () {
 });
 
 //task to run all
-gulp.task('default', ['devServer','sass','lint', 'watch']);
+gulp.task('default', ['devServer','sass','lint', 'browser','watch']);
 gulp.task('build',['sass','minify-html','minify-css','minify-img']);
