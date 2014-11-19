@@ -1,0 +1,160 @@
+//Variables
+
+$coral: #fa7455;
+$grey: #fafbfc;
+$white: #fff;
+
+
+//Mixins
+//
+
+
+
+$url:'https://ununsplash.imgix.net/reserve/qstJZUtQ4uAjijbpLzbT_LO234824.JPG?q=75&fm=jpg&s=19a0626c59b4f2033f70e2fbb6123fcc';
+
+/* border-box*/
+*{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	padding:0;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
+	// width:970px;
+}
+
+
+
+section{
+	margin:0;
+	padding:0;
+}
+
+button{
+	background:none;
+	border-color:#fff;
+	border-radius:10%;
+	border-width:2px;
+	outline:none;
+	padding:4px 8px 4px 8px;
+}
+
+ul{
+	list-style:none;
+	padding-left:0;
+}
+
+
+.bold{
+	font-weight:400;
+}
+
+//---------------------------
+//
+
+.links li{
+	display:inline-block;
+}
+.header h1{
+	margin:0;
+}
+
+.header{
+
+	padding: 0 0 150px 0;
+	background:url($url);
+	background-size: cover;
+
+	color:$white;
+	text-align:center;
+	h2{
+		margin-top:0px;
+		font-family: 'Satisfy', cursive;
+	}
+}
+
+.info{
+	padding-top:250px;
+}
+
+
+.top-bar {
+	margin:0;
+	padding: 30px 0 30px 0;
+	background: #fa7455;
+	color: $white;
+	
+	p{
+		margin:0 0 0 13%;
+		display:inline;
+		font-weight:300;
+		font-size:12px;
+
+	}
+
+	ul{
+		display:inline;
+		margin:0 0 0 53%;
+	}
+}
+
+.nav-bar{
+	background:$grey;
+	color:$coral;
+	
+		padding-bottom:88px;
+
+	
+	li{
+		display:inline;
+	}
+}
+
+// About
+.about{
+	background:$coral;
+	color:$white;
+	padding:80px;
+	text-align:center;
+	
+	li{
+		display:inline;
+	}
+}
+
+
+// Clients
+.clients{
+	h2{
+		color:$coral;
+	}
+}
+
+.client-info{
+	background:$coral;
+	width:40%;
+}
+.logos li{
+	display:inline-block;
+}
+
+//Projects
+.projects{
+	text-align:center;
+	background:#615c85;
+}
+
+//Team
+
+.team li{
+	display:inline-block;
+}
+//News
+.news{
+	background:#8bb900;
+	padding:1px;
+}
