@@ -10,6 +10,9 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300; }
 
+h2 {
+  font-size: 20px; }
+
 section {
   margin: 0;
   padding: 0; }
@@ -26,6 +29,9 @@ ul {
   list-style: none;
   padding-left: 0; }
 
+form {
+  display: inline; }
+
 .bold {
   font-weight: 400; }
 
@@ -37,40 +43,57 @@ ul {
 
 .header {
   padding: 0 0 150px 0;
-  background: url('https://ununsplash.imgix.net/reserve/qstJZUtQ4uAjijbpLzbT_LO234824.JPG?q=75&fm=jpg&s=19a0626c59b4f2033f70e2fbb6123fcc');
+  background: url('../images/1.jpeg');
   background-size: cover;
   color: #fff;
   text-align: center; }
   .header h2 {
     margin-top: 0px;
-    font-family: 'Satisfy', cursive; }
+    font-family: 'Satisfy', cursive;
+    font-size: 46px; }
 
 .info {
   padding-top: 250px; }
 
 .top-bar {
   margin: 0;
-  padding: 30px 0 30px 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
   background: #fa7455;
   color: #fff; }
   .top-bar p {
-    margin: 0 0 0 13%;
+    margin-top: 6.5%;
+    margin-bottom: 6.5%;
+    margin-left: 10%;
     display: inline;
     font-weight: 300;
     font-size: 12px; }
   .top-bar ul {
     display: inline;
-    margin: 0 0 0 53%; }
+    margin: 0 0 0 69%; }
 
 .nav-bar {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  -webkit-box-shadow: 0 8px 6px -6px #000;
+  -moz-box-shadow: 0 8px 6px -6px #000;
+  box-shadow: 0 8px 6px -6px #000;
+  position: relative;
   background: #fafbfc;
-  color: #fa7455;
-  padding-bottom: 88px; }
-  .nav-bar li {
-    display: inline; }
+  color: #fa7455; }
+  .nav-bar ul, .nav-bar li {
+    display: inline;
+    padding-left: 45px; }
+  .nav-bar li:nth-child(3) {
+    padding-left: 30px; }
+  .nav-bar ul {
+    padding-left: 125px; }
 
 .about {
   background: #fa7455;
+  -webkit-box-shadow: 0px -8px 6px -6px #000;
+  -moz-box-shadow: 0px -8px 6px -6px #000;
+  box-shadow: 0px -8px 6px -6px #000;
   color: #fff;
   padding: 80px;
   text-align: center; }

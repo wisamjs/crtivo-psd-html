@@ -7,10 +7,39 @@ $white: #fff;
 
 //Mixins
 //
+@mixin paddingHeight($padding){
+	padding-top: $padding;
+	padding-bottom: $padding;
+}
+
+@mixin paddingWidth($padding){
+	padding-left: $padding;
+	padding-right: $padding;
+}
+
+@mixin marginHeight($margin){
+	margin-top: $margin;
+	margin-bottom: $margin;
+}
+
+
+@mixin marginWidth($margin){
+	margin-top: $margin;
+	margin-bottom: $margin;
+}
+
+@mixin shadow($hOffset,$vOffset,$blur,$spread,$color){
+
+	-webkit-box-shadow: $hOffset $vOffset $blur $spread $color;
+	-moz-box-shadow: $hOffset $vOffset $blur $spread $color;
+	box-shadow:  $hOffset $vOffset $blur $spread $color;
+}
 
 
 
-$url:'https://ununsplash.imgix.net/reserve/qstJZUtQ4uAjijbpLzbT_LO234824.JPG?q=75&fm=jpg&s=19a0626c59b4f2033f70e2fbb6123fcc';
+
+
+$url:'../images/1.jpeg';
 
 /* border-box*/
 *{
@@ -25,6 +54,10 @@ body{
 	font-family: 'Open Sans', sans-serif;
 	font-weight:300;
 	// width:970px;
+}
+
+h2{
+	font-size:20px;
 }
 
 
@@ -46,6 +79,10 @@ button{
 ul{
 	list-style:none;
 	padding-left:0;
+}
+
+form{
+	display:inline;
 }
 
 
@@ -74,6 +111,7 @@ ul{
 	h2{
 		margin-top:0px;
 		font-family: 'Satisfy', cursive;
+		font-size:46px;
 	}
 }
 
@@ -84,12 +122,13 @@ ul{
 
 .top-bar {
 	margin:0;
-	padding: 30px 0 30px 0;
+	@include paddingHeight(15px);
 	background: #fa7455;
 	color: $white;
-	
+
 	p{
-		margin:0 0 0 13%;
+		@include marginHeight(6.5%);
+		margin-left:10%;
 		display:inline;
 		font-weight:300;
 		font-size:12px;
@@ -98,25 +137,34 @@ ul{
 
 	ul{
 		display:inline;
-		margin:0 0 0 53%;
+		margin:0 0 0 69%;
 	}
 }
 
 .nav-bar{
+	@include paddingHeight(15px);
+	@include shadow(0, 8px, 6px, -6px, #000);
+	position:relative;
 	background:$grey;
 	color:$coral;
-	
-		padding-bottom:88px;
 
-	
-	li{
+	ul, li{
 		display:inline;
+		padding-left:45px;
+	}
+
+	li:nth-child(3){
+		padding-left:30px;
+	}
+	ul{
+		padding-left:125px;
 	}
 }
 
 // About
 .about{
 	background:$coral;
+	@include shadow(0px, -8px, 6px, -6px, #000);
 	color:$white;
 	padding:80px;
 	text-align:center;
