@@ -7,28 +7,28 @@ $white: #fff;
 
 //Mixins
 //
-@mixin paddingHeight($padding){
+@mixin paddingHeight($padding) {
 	padding-top: $padding;
 	padding-bottom: $padding;
 }
 
-@mixin paddingWidth($padding){
+@mixin paddingWidth($padding) {
 	padding-left: $padding;
 	padding-right: $padding;
 }
 
-@mixin marginHeight($margin){
+@mixin marginHeight($margin) {
 	margin-top: $margin;
 	margin-bottom: $margin;
 }
 
 
-@mixin marginWidth($margin){
+@mixin marginWidth($margin) {
 	margin-top: $margin;
 	margin-bottom: $margin;
 }
 
-@mixin shadow($hOffset,$vOffset,$blur,$spread,$color){
+@mixin shadow($hOffset, $vOffset, $blur, $spread, $color) {
 
 	-webkit-box-shadow: $hOffset $vOffset $blur $spread $color;
 	-moz-box-shadow: $hOffset $vOffset $blur $spread $color;
@@ -39,7 +39,7 @@ $white: #fff;
 
 
 
-$url:'../images/1.jpeg';
+$url:'../images/7.jpeg';
 
 /* border-box*/
 *{
@@ -79,6 +79,7 @@ button{
 ul{
 	list-style:none;
 	padding-left:0;
+
 }
 
 form{
@@ -89,6 +90,14 @@ form{
 .bold{
 	font-weight:400;
 }
+
+input{
+	background:#ccc;
+	border-radius:150px;
+	outline:none;
+	border:none;
+}
+
 
 //---------------------------
 //
@@ -103,7 +112,7 @@ form{
 .header{
 
 	padding: 0 0 150px 0;
-	background:url($url);
+	background:url($url) center no-repeat fixed;
 	background-size: cover;
 
 	color:$white;
@@ -157,7 +166,10 @@ form{
 		padding-left:30px;
 	}
 	ul{
-		padding-left:125px;
+		padding-left:285px;
+	}
+	form{
+		margin-left:40%;
 	}
 }
 

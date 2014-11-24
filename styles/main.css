@@ -35,6 +35,12 @@ form {
 .bold {
   font-weight: 400; }
 
+input {
+  background: #ccc;
+  border-radius: 150px;
+  outline: none;
+  border: none; }
+
 .links li {
   display: inline-block; }
 
@@ -43,7 +49,7 @@ form {
 
 .header {
   padding: 0 0 150px 0;
-  background: url('../images/1.jpeg');
+  background: url('../images/7.jpeg') center no-repeat fixed;
   background-size: cover;
   color: #fff;
   text-align: center; }
@@ -87,7 +93,9 @@ form {
   .nav-bar li:nth-child(3) {
     padding-left: 30px; }
   .nav-bar ul {
-    padding-left: 125px; }
+    padding-left: 285px; }
+  .nav-bar form {
+    margin-left: 40%; }
 
 .about {
   background: #fa7455;
