@@ -36,8 +36,14 @@ $white: #fff;
 }
 
 
-
-
+/* Floating fix*/
+.clearfix:after {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
 
 $url:'../images/7.jpeg';
 
@@ -69,16 +75,18 @@ section{
 
 button{
 	background:none;
-	border-color:#fff;
+	border-color:$white;
 	border-radius:10%;
 	border-width:2px;
 	outline:none;
 	padding:4px 8px 4px 8px;
 }
 
+
 ul{
 	list-style:none;
 	padding-left:0;
+	margin:0;
 
 }
 
@@ -135,18 +143,23 @@ input{
 	background: #fa7455;
 	color: $white;
 
+	ul{
+		 width:15%;
+		 margin:0;
+		 float:right;
+		 text-align:center;
+	}
+
 	p{
+		width:81%;
 		@include marginHeight(6.5%);
-		margin-left:10%;
-		display:inline;
+		margin:0;
+		float:left;
+		// margin-left:10%;
 		font-weight:300;
 		font-size:12px;
 
-	}
-
-	ul{
-		display:inline;
-		margin:0 0 0 69%;
+		padding-left:4%;
 	}
 }
 
@@ -156,20 +169,27 @@ input{
 	position:relative;
 	background:$grey;
 	color:$coral;
+	text-align:center;
 
-	ul, li{
+	li{
+		padding-left:4%;
 		display:inline;
-		padding-left:45px;
 	}
 
 	li:nth-child(3){
-		padding-left:30px;
+		 // padding-left:30px;
 	}
 	ul{
-		padding-left:285px;
+		 // padding-left:285px;
+		 float:left;
+		 width:60%;
+		 padding-left:5%;
 	}
 	form{
-		margin-left:40%;
+		 // margin-left:40%;
+		 float:right;
+		 padding-left:10%;
+		 width:40%;
 	}
 }
 
@@ -178,11 +198,28 @@ input{
 	background:$coral;
 	@include shadow(0px, -8px, 6px, -6px, #000);
 	color:$white;
-	padding:80px;
+	@include paddingHeight(20px);
 	text-align:center;
 	
 	li{
-		display:inline;
+		display:inline-block;
+		padding:5%;
+	}
+
+	i{
+		font-size:50px;
+	}
+
+	.title{
+		display:block;
+	}
+	h2{
+		font-weight:300;
+		font-size:35px;
+	}
+	h3{
+		font-weight:300;
+		font-size:16px;
 	}
 }
 
@@ -191,10 +228,13 @@ input{
 .clients{
 	h2{
 		color:$coral;
+
 	}
+
+	@include paddingHeight(50px);
 }
 
-.client-info{
+.testimonial{
 	background:$coral;
 	width:40%;
 }

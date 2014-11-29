@@ -1,3 +1,11 @@
+/* Floating fix*/
+.clearfix:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both; }
+
 /* border-box*/
 * {
   -moz-box-sizing: border-box;
@@ -27,7 +35,8 @@ button {
 
 ul {
   list-style: none;
-  padding-left: 0; }
+  padding-left: 0;
+  margin: 0; }
 
 form {
   display: inline; }
@@ -67,16 +76,20 @@ input {
   padding-bottom: 15px;
   background: #fa7455;
   color: #fff; }
+  .top-bar ul {
+    width: 15%;
+    margin: 0;
+    float: right;
+    text-align: center; }
   .top-bar p {
+    width: 81%;
     margin-top: 6.5%;
     margin-bottom: 6.5%;
-    margin-left: 10%;
-    display: inline;
+    margin: 0;
+    float: left;
     font-weight: 300;
-    font-size: 12px; }
-  .top-bar ul {
-    display: inline;
-    margin: 0 0 0 69%; }
+    font-size: 12px;
+    padding-left: 4%; }
 
 .nav-bar {
   padding-top: 15px;
@@ -86,16 +99,19 @@ input {
   box-shadow: 0 8px 6px -6px #000;
   position: relative;
   background: #fafbfc;
-  color: #fa7455; }
-  .nav-bar ul, .nav-bar li {
-    display: inline;
-    padding-left: 45px; }
-  .nav-bar li:nth-child(3) {
-    padding-left: 30px; }
+  color: #fa7455;
+  text-align: center; }
+  .nav-bar li {
+    padding-left: 4%;
+    display: inline; }
   .nav-bar ul {
-    padding-left: 285px; }
+    float: left;
+    width: 60%;
+    padding-left: 5%; }
   .nav-bar form {
-    margin-left: 40%; }
+    float: right;
+    padding-left: 10%;
+    width: 40%; }
 
 .about {
   background: #fa7455;
@@ -103,15 +119,30 @@ input {
   -moz-box-shadow: 0px -8px 6px -6px #000;
   box-shadow: 0px -8px 6px -6px #000;
   color: #fff;
-  padding: 80px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   text-align: center; }
   .about li {
-    display: inline; }
+    display: inline-block;
+    padding: 5%; }
+  .about i {
+    font-size: 50px; }
+  .about .title {
+    display: block; }
+  .about h2 {
+    font-weight: 300;
+    font-size: 35px; }
+  .about h3 {
+    font-weight: 300;
+    font-size: 16px; }
 
-.clients h2 {
-  color: #fa7455; }
+.clients {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  .clients h2 {
+    color: #fa7455; }
 
-.client-info {
+.testimonial {
   background: #fa7455;
   width: 40%; }
 
