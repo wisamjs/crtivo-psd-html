@@ -3,6 +3,7 @@
 $coral: #fa7455;
 $grey: #fafbfc;
 $white: #fff;
+$purple: #615c85;
 
 
 //Mixins
@@ -33,6 +34,24 @@ $white: #fff;
 	-webkit-box-shadow: $hOffset $vOffset $blur $spread $color;
 	-moz-box-shadow: $hOffset $vOffset $blur $spread $color;
 	box-shadow:  $hOffset $vOffset $blur $spread $color;
+}
+
+@mixin arrow($color, $top: 95.8%){
+	:after{
+		content:'&#xf100\f151';
+		position: absolute;
+	    top: $top;
+	    margin-left: auto;
+	    margin-right: auto;
+	    left: 0;
+	    right: 0;
+	    content: '';
+	   	width: 0; 
+		height: 0; 
+		border-left: 30px solid transparent;
+		border-right: 30px solid transparent;
+		border-bottom: 30px solid $color;
+	}
 }
 
 
@@ -117,11 +136,12 @@ input{
 	margin:0;
 }
 
-.header{
 
+.header{
 	padding: 0 0 150px 0;
 	background:url($url) center no-repeat fixed;
 	background-size: cover;
+	position:relative;
 
 	color:$white;
 	text-align:center;
@@ -130,6 +150,9 @@ input{
 		font-family: 'Satisfy', cursive;
 		font-size:46px;
 	}
+
+	@include arrow($coral);
+
 }
 
 .info{
@@ -140,7 +163,7 @@ input{
 .top-bar {
 	margin:0;
 	@include paddingHeight(15px);
-	background: #fa7455;
+	background: $coral;
 	color: $white;
 
 	ul{
@@ -196,11 +219,10 @@ input{
 // About
 .about{
 	background:$coral;
-	@include shadow(0px, -8px, 6px, -6px, #000);
+	// @include shadow(0px, -8px, 6px, -6px, #000);
 	color:$white;
 	@include paddingHeight(20px);
 	text-align:center;
-	
 	li{
 		display:inline-block;
 		padding:5%;
@@ -226,12 +248,14 @@ input{
 
 // Clients
 .clients{
+	position:relative;
 	h2{
 		color:$coral;
 
 	}
 
 	@include paddingHeight(50px);
+	@include arrow($purple,97.1%);
 }
 
 .testimonial{
@@ -245,7 +269,7 @@ input{
 //Projects
 .projects{
 	text-align:center;
-	background:#615c85;
+	background:$purple;
 }
 
 //Team
